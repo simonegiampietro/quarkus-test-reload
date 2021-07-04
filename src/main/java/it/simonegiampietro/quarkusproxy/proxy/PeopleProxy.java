@@ -1,21 +1,17 @@
 package it.simonegiampietro.quarkusproxy.proxy;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import it.simonegiampietro.quarkusproxy.model.PeopleDB;
+import it.simonegiampietro.quarkusproxy.persistence.DaoProtostuff;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
+
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.attribute.BasicFileAttributes;
-import java.nio.file.attribute.FileAttribute;
 import java.util.Date;
-
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import org.eclipse.microprofile.config.inject.ConfigProperty;
-
-import it.simonegiampietro.quarkusproxy.model.PeopleDB;
-import it.simonegiampietro.quarkusproxy.persistence.DaoProtostuff;
 
 @ApplicationScoped
 public class PeopleProxy {
